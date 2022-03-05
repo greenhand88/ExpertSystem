@@ -11,19 +11,17 @@ public class Main extends JFrame {
         Panel optionPanel = new Panel(new GridLayout(4, 5, 4, 4));
         RuleSet set=new RuleSet();
         set.init();
-        int length = set.list.size(),count=0;
-
+        int length = set.list.size();
+        HashSet<String>cs=new HashSet<>();
         for (int i = 0; i < length; i++)
             for(String s:set.list.get(i).conditions)
-                count++;
-        checkBoxs = new JCheckBox[count];
+                cs.add(s);
+        checkBoxs = new JCheckBox[cs.size()];
         int index=0;
-        for (int i = 0; i < length;i++) {
-            for(String s:set.list.get(i).conditions){
+        for (String s:cs) {
                 checkBoxs[index]=new JCheckBox(s);
                 optionPanel.add(checkBoxs[index]);
                 index++;
-            }
         }
         add(optionPanel, BorderLayout.CENTER);
 

@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class Rule {
     ArrayList<String> conditions;
-    public String result;
+    String result;
     public Rule(ArrayList<String>list,String s){
         conditions=list;
         result=s;

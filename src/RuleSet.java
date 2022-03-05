@@ -8,10 +8,10 @@ public class RuleSet {
     }
     public void init(){
         list.add(new Rule(new ArrayList<String>(){{add("头疼");}},"感冒"));
-        list.add(new Rule(new ArrayList<String>(){{add("喉喽疼");}},"咽喉炎"));
+        list.add(new Rule(new ArrayList<String>(){{add("喉咙疼");}},"咽喉炎"));
         list.add(new Rule(new ArrayList<String>(){{add("肚子疼");}},"肠胃炎"));
-        list.add(new Rule(new ArrayList<String>(){{add("头晕");add("喉喽疼");}},"流感"));
-        list.add(new Rule(new ArrayList<String>(){{add("头疼");add("喉喽疼");}},"发烧"));
+        list.add(new Rule(new ArrayList<String>(){{add("头晕");add("喉咙疼");}},"流感"));
+        list.add(new Rule(new ArrayList<String>(){{add("头疼");add("喉咙疼");}},"发烧"));
         list.add(new Rule(new ArrayList<String>(){{add("感冒");add("发烧");}},"没救了!"));
     }
     public String ratiocinate(HashSet<String>set){
