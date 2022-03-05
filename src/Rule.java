@@ -4,10 +4,10 @@ import java.util.HashSet;
 
 public class Rule {
     ArrayList<String> conditions;
-    String result;
+    public String result;
     public Rule(ArrayList<String>list,String s){
         conditions=list;
-        s=result;
+        result=s;
     }
     public boolean match(HashSet<String>k){
         for(String s:conditions){
